@@ -1,0 +1,16 @@
+# Simulating one draw.
+
+A <- rexp(10000,0.1)
+print(A)
+typeof(A)
+is.vector(A)
+class(A)
+B <- rexp(10000,0.1)
+print(B)
+Ti <- pmax(A,B)
+print(Ti)
+t2=pmax(rexp(10000,.1),rexp(10000,.1))
+hist(t2,breaks = 50,probability = T)
+curve((0.2*exp(-0.1*x)-0.2*exp(-0.2*x)) , from =0, to=100, add= T,col="orange")
+sum(t2>15)/length(t2)
+mean(t2)
